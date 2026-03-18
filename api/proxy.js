@@ -23,14 +23,16 @@ async function handleRequest(fields, files) {
     }
 
     // Loop semua file dan upload otomatis
-    for (let file of files) {
-        const uploadedUrl = await uploadToImgBB(file.buffer);
-        // Map field file ke parameter API asli (avatar/url/content)
-        params.append(file.fieldname, uploadedUrl);
+    if (files && files.length > 0) {
+        for (let file of files) {
+            const uploadedUrl = await uploadToImgBB(file.buffer);
+            // Map field file ke parameter API asli (avatar/url/content)
+            params.append(file.fieldname, uploadedUrl);
+        }
     }
 
     // Bangun URL akhir untuk menembak API Zenzxz
     return `${BASE_URL}${endpoint}?${params.toString()}`;
 }
 
-module.exports = { handleRequest }; 
+module.exports = { handleRequest };
