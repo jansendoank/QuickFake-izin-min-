@@ -1,0 +1,168 @@
+
+
+REST API Base URL
+
+```
+https://api.zenzxz.my.id/
+```
+
+---
+
+Endpoint 1: Brat Generator
+
+Path: /maker/brat
+Parameter:
+
+· text (required) – Teks yang akan ditampilkan dalam gaya Brat.
+
+Contoh:
+
+```
+/maker/brat?text=P
+```
+
+---
+
+Endpoint 2: Brat Video Generator
+
+Path: /maker/bratvid
+Parameter:
+
+· text (required) – Teks yang akan dianimasikan dalam gaya Brat.
+
+Contoh:
+
+```
+/maker/bratvid?text=P mabar
+```
+
+---
+
+Endpoint 3: Fake Call Screen
+
+Path: /maker/fakecall
+Parameter:
+
+· nama (required) – Nama yang ditampilkan di layar panggilan.
+· durasi (required) – Status atau durasi panggilan (misal: Calling..., 00:15).
+· avatar (required) – URL langsung foto profil pemanggil.
+
+Contoh:
+
+```
+/maker/fakecall?nama=Admin&durasi=24.59&avatar=https://cdn.discordapp.com/embed/avatars/0.png
+```
+
+---
+
+Endpoint 4: Fake DANA Saldo v2
+
+Path: /maker/fakedanav2
+Parameter:
+
+· nominal (required) – Jumlah saldo yang ditampilkan.
+
+Contoh:
+
+```
+/maker/fakedanav2?nominal=200000
+```
+
+---
+
+Endpoint 5: Fake Facebook Comment
+
+Path: /maker/fakefbcomment
+Parameter:
+
+· name (required) – Nama pengguna.
+· comment (required) – Isi komentar.
+· url (required) – URL langsung foto profil.
+
+Contoh:
+
+```
+/maker/fakefbcomment?name=Admin&comment=Awok awok awok&url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQorY5WfawqYMpcdjOaNXGqhmDJ4600-pxMjm17b_hKzQ&s
+```
+
+---
+
+Endpoint 6: Fake WhatsApp Group UI
+
+Path: /maker/fakegroup
+Parameter:
+
+· url (required) – URL foto grup.
+· title (required) – Nama grup.
+· number (required) – Jumlah anggota atau ID grup.
+· time (required) – Waktu yang ditampilkan.
+
+Contoh:
+
+```
+/maker/fakegroup?url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQorY5WfawqYMpcdjOaNXGqhmDJ4600-pxMjm17b_hKzQ&s&title=Coding pemula&number=Arka, Bayu, jule&time=12.00
+```
+
+---
+
+Endpoint 7: Fake Instagram Post
+
+Path: /maker/fakeigpost
+Parameter:
+
+· avatar (required) – URL foto profil.
+· content (required) – URL konten utama.
+· username (required) – Nama pengguna Instagram.
+· likes (optional) – Jumlah like.
+· comment (optional) – Jumlah komentar atau isi komentar.
+· share (optional) – Jumlah share.
+· repost (optional) – Jumlah repost.
+· date (optional) – Waktu relatif.
+· desc (optional) – Keterangan postingan.
+
+Contoh:
+
+```
+/maker/fakeigpost?avatar=https://cdn.discordapp.com/embed/avatars/0.png&content=https://cdn.discordapp.com/embed/avatars/0.png&username=admin&likes=12999&comment=bayu : wkwkwk&share=2000&repost=300&date=1d&desc=Adalah pokonya
+```
+
+---
+
+Endpoint 8: Fake TikTok Profile
+
+Path: /maker/faketiktok
+Parameter:
+
+· name (required) – Nama pengguna.
+· username (required) – Username TikTok.
+· following (required) – Jumlah following.
+· followers (required) – Jumlah followers.
+· likes (required) – Jumlah like.
+· url (required) – URL foto profil.
+
+Contoh:
+
+```
+/maker/faketiktok?name=Admin&username=admin&following=1&followers=2jt&likes=12999&url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQorY5WfawqYMpcdjOaNXGqhmDJ4600-pxMjm17b_hKzQ&s
+```
+
+---
+
+Endpoint 9: Fake TikTok Comment
+
+Path: /maker/fakettcomment
+Parameter:
+
+· url (required) – URL foto profil.
+· username (required) – Username TikTok.
+· comment (required) – Isi komentar.
+· date (required) – Waktu relatif.
+
+Contoh:
+
+```
+/maker/fakettcomment?url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQorY5WfawqYMpcdjOaNXGqhmDJ4600-pxMjm17b_hKzQ&s&username=admin&comment=Awok awok awok&date=1d
+```
+
+---
+Tolong buatkan solusi agar endpoint ini bisa menerima POST request tanpa mengubah endpoint asli. Parameter tetap dikirim sebagai URL string biasa (bukan base64 gambar). Cukup buatkan proxy/wrapper sederhana di sisi server. ini berlaku pada parameter yg membutuhkan gambar. jadi user tidak perlu cape cape ubah gambar ke link
