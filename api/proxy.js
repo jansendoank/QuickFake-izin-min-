@@ -2,7 +2,7 @@ const axios = require('axios');
 const FormData = require('form-data');
 
 // API Key ImgBB kamu
-const IMGBB_KEY = '4f2dcd79dcf47d778991fc93e3320c09'; 
+const IMGBB_KEY = '42dc9f23858eeb5d8da61c24abc2b2a4'; 
 const BASE_URL = 'https://api.zenzxz.my.id'; 
 
 async function uploadToImgBB(fileBuffer) {
